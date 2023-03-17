@@ -114,8 +114,8 @@ function getWeatherData(city, unit, hourlyorWeek) {
             } else {
                 updateForecast(data.days, unit, "week");
             }
-            sunRise.innerText = covertTimeTo12HourFormat(today.sunrise);
-            sunSet.innerText = covertTimeTo12HourFormat(today.sunset);
+            sunRise.innerText = covertTimeTo24HourFormat(today.sunrise);
+            sunSet.innerText = covertTimeTo24HourFormat(today.sunset);
         })
         .catch((err) => {
             alert("City not found in our database");
@@ -214,7 +214,7 @@ function getHour(time) {
 }
 
 
-function covertTimeTo12HourFormat(time) {
+function covertTimeTo24HourFormat(time) {
     let hour = time.split(":")[0];
     let minute = time.split(":")[1];
     let ampm = hour >= 24 ? "am" : "pm";
