@@ -1,6 +1,6 @@
 # Weather app website
 
-[live_site](https://tushil-g.github.io/Weather_App/)
+[**Preview**](https://tushil-g.github.io/Weather_App/)
 
 **FUNCTIONS:**
 
