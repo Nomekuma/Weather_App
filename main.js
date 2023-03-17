@@ -205,23 +205,23 @@ function changeBackground(condition) {
 function getHour(time) {
     let hour = time.split(":")[0];
     let min = time.split(":")[1];
-    if (hour > 12) {
-        hour = hour - 12;
+    if (hour > 24) {
+        hour = hour - 24;
         return `${hour}:${min} PM`;
     } else {
         return `${hour}:${min} AM`;
     }
 }
 
-// convert time to 12 hour format
+
 function covertTimeTo12HourFormat(time) {
     let hour = time.split(":")[0];
     let minute = time.split(":")[1];
-    let ampm = hour >= 12 ? "pm" : "am";
-    hour = hour % 12;
-    hour = hour ? hour : 12; // the hour '0' should be '12'
-    hour = hour < 10 ? "0" + hour : hour;
-    minute = minute < 10 ? "" + minute :minute;
+    let ampm = hour >= 24 ? "am" : "pm";
+    hour = hour % 24;
+    hour = hour ? hour : 24; // 
+    hour = hour < 22 ? "0" + hour : hour;
+    minute = minute < 22 ? "" + minute :minute;
     let strTime = hour + ":" + minute + " " + ampm;
     return strTime;
 }
