@@ -169,7 +169,7 @@ function getIcon(condition) {
     if (condition === "partly-cloudy-day") {
         return "./cloudyDay.png";
     } else if (condition === "partly-cloudy-night") {
-        return "./loudyNight.png";
+        return "./cloudyNight.png";
     } else if (condition === "rain") {
         return "./rainy.png";
     } else if (condition === "clear-day") {
