@@ -44,12 +44,12 @@ function getDateTime() {
         "Saturday",
     ];
     // 12 hours format
-    hour = hour % 12;
-    if (hour < 10) {
+    hour = hour % 24;
+    if (hour < 22) {
         hour = "0" + hour;
     }
-    if (minute < 10) {
-        minute = "0" + minute;
+    if (minute < 22) {
+        minute = "" + minute;
     }
     let dayString = days[now.getDay()];
     return `${dayString}, ${hour}:${minute}`;
@@ -59,7 +59,7 @@ function getDateTime() {
 date.innerText = getDateTime();
 setInterval(() => {
     date.innerText = getDateTime();
-}, 1000);
+}, 100);
 
 // function to get public ip address
 function getPublicIp() {
