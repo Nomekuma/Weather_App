@@ -176,7 +176,11 @@ function getIcon(condition) {
         return "./sunny.png";
     } else if (condition === "clear-night") {
         return "./clearNight.png";
-    } else {
+    }  else if (condition=== "showers-night"){
+        return "./clearNight.png"
+    } else if (condition=== "thunder"){
+        return "./rainy.png"
+   }else {
         return "./sunny.png";
     }
 }
