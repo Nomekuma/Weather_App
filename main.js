@@ -225,7 +225,7 @@ function covertTimeTo24HourFormat(time) {
     hour = hour % 24;
     hour = hour ? hour : 24; // 
     hour = hour < 12? "0" + hour : hour;
-    minute = minute < 12 ? "0" + minute :minute;
+    minute = minute < 12 ? "" + minute :minute;
     let strTime = hour + ":" + minute + " " + ampm;
     return strTime;
 }
