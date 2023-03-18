@@ -43,13 +43,13 @@ function getDateTime() {
         "Friday",
         "Saturday",
     ];
-    // 12 hours format
+    // 24 hours format
     hour = hour % 24;
-    if (hour < 22) {
+    if (hour < 12) {
         hour = "0" + hour;
     }
-    if (minute < 22) {
-        minute = "" + minute;
+    if (minute < 12) {
+        minute = "0" + minute;
     }
     let dayString = days[now.getDay()];
     return `${dayString}, ${hour}:${minute}`;
@@ -224,8 +224,8 @@ function covertTimeTo24HourFormat(time) {
     let ampm = hour >= 24 ? "am" : "pm";
     hour = hour % 24;
     hour = hour ? hour : 24; // 
-    hour = hour < 22 ? "" + hour : hour;
-    minute = minute < 22 ? "" + minute :minute;
+    hour = hour < 12? "0" + hour : hour;
+    minute = minute < 12 ? "0" + minute :minute;
     let strTime = hour + ":" + minute + " " + ampm;
     return strTime;
 }
