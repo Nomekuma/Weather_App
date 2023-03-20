@@ -45,7 +45,7 @@ function getDateTime() {
     ];
     // 24 hours format
     hour = hour % 24;
-    if (hour < 12) {
+    if (hour < 10) {
         hour = "0" + hour;
     }
     if (minute < 10) {
