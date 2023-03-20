@@ -179,7 +179,39 @@ function getIcon(condition) {
     }  else if (condition=== "showers-night"){
         return "./clearNight.png"
     } else if (condition=== "thunder"){
-        return "./rainy.png"
+        return "./thunder.png"
+    } else if (condition=== "wind"){
+        return "./wind.png"
+    } else if (condition=== "thunder-showers-night"){
+        return "./thunder-showers-night.png"
+    } else if (condition=== "thunder-showers-day"){
+        return "./thunder-showers-day.png"
+    } else if (condition=== "thunder-rain"){
+        return "./thunder-rain.png"
+    } else if (condition=== "snow-showers-night"){
+        return "./snow-showers-night.png"
+    } else if (condition=== "snow-showers-day"){
+        return "./snow-showers-day.png"
+    } else if (condition=== "snow"){
+        return "./snow.png"
+    } else if (condition=== "sleet"){
+        return "./sleet.png"
+    } else if (condition=== "showers-night"){
+        return "./showers-night.png"
+    } else if (condition=== "showers-day"){
+        return "./showers-day.png"
+    } else if (condition=== "rain-snow-showers-night"){
+        return "./rain-snow-showers-night.png"
+    } else if (condition=== "rain-snow-showers-day"){
+        return "./rain-snow-showers-day.png"
+    } else if (condition=== "rain-snow"){
+        return "./rain-snow.png"
+    } else if (condition=== "hail"){
+        return "./hail.png"
+    } else if (condition=== "fog"){
+        return "./fog.png"
+    } else if (condition=== "cloudy"){
+        return "./cloudy.png"
    }else {
         return "./sunny.png";
     }
@@ -199,6 +231,38 @@ function changeBackground(condition) {
         bg = "./cd.jpg";
     } else if (condition === "clear-night") {
         bg = "./cn.jpg";
+    } else if (condition === "wind") {
+        bg = "./th.png"; 
+    } else if (condition === "thunder-showers-night") {
+        bg = "./rain.webp";
+    } else if (condition === "thunder-showers-day") {
+        bg = "./rain.webp";
+    } else if (condition === "thunder-rain") {
+        bg = "./rain.webp";
+    } else if (condition === "thunder") {
+        bg = "./rain.webp";
+    } else if (condition === "snow-showers-night") {
+        bg = "./snowy.png";
+    } else if (condition === "snow-showers-day") {
+        bg = "./snowy.png";
+    } else if (condition === "snow") {
+        bg = "./snowy.png"; 
+    } else if (condition === "sleet") {
+        bg = "./snowy.png";
+    } else if (condition === "showers-night") {
+        bg = "./rain.webp";
+    } else if (condition === "showers-day") {
+        bg = "./cn.jpg";
+    } else if (condition === "rain-snow-showers-night") {
+        bg = "./snowy.png";  
+    } else if (condition === "rain-snow-shoers-day") {
+        bg = "./snowy.png"; 
+    } else if (condition === "rain-snow") {
+        bg = "./snowy.png";
+    } else if (condition === "fog") {
+        bg = "./cloud3.jpg";
+    } else if (condition === "cloudy") {
+        bg = "./cloud3.jpg";                                                                                                                                                    
     } else {
         bg = "./pc.webp";
     }
