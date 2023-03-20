@@ -167,7 +167,7 @@ function updateForecast(data, unit, type) {
 // function to change weather icons
 function getIcon(condition) {
     if (condition === "partly-cloudy-day") {
-        return "./clear-day.png";
+        return "./cloudyDay.png";
     } else if (condition === "partly-cloudy-night") {
         return "./cloudyNight.png";
     } else if (condition === "rain") {
@@ -179,7 +179,7 @@ function getIcon(condition) {
     }  else if (condition=== "showers-night"){
         return "./clearNight.png"
     } else if (condition=== "thunder"){
-        return "./thunder.png"
+        return "./rainy.png"
    }else {
         return "./sunny.png";
     }
