@@ -48,7 +48,7 @@ function getDateTime() {
     if (hour < 12) {
         hour = "0" + hour;
     }
-    if (minute < 12) {
+    if (minute < 10) {
         minute = "0" + minute;
     }
     let dayString = days[now.getDay()];
