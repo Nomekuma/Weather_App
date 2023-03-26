@@ -285,12 +285,12 @@ function getHour(time) {
 function covertTimeTo24HourFormat(time) {
     let hour = time.split(":")[0];
     let minute = time.split(":")[1];
-    let ampm = hour >= 24 ? "pm" : "am";
+    let ampm = hour >= 12 ? "am" : "pm";
     hour = hour % 24;
     hour = hour ? hour : 24; // 
-    hour = hour < 12? "0" + hour : hour;
-    minute = minute < 12 ? "" + minute :minute;
-    let strTime = hour + ":" + minute + " " + ampm;
+    hour = hour < 10? "0" + hour : hour;
+    minute = minute < 10 ? "0" + minute :minute;
+    let strTime = hour + ":" + minute + "0 " + ampm;
     return strTime;
 }
 
