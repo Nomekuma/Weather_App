@@ -82,7 +82,7 @@ getPublicIp();
 // function to get weather data
 function getWeatherData(city, unit, hourlyorWeek) {
     fetch(
-            `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=EJ6UBL2JEQGYB3AA4ENASN62J&contentType=json`, {
+            `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=SMUFEKCB3GUJAF7H7PM54K3B6&contentType=json`, {
                 method: "GET",
                 headers: {},
             }
@@ -118,7 +118,7 @@ function getWeatherData(city, unit, hourlyorWeek) {
             sunSet.innerText = covertTimeTo24HourFormat(today.sunset);
         })
         .catch((err) => {
-            alert("City not found in our database");
+            alert("An error occured. Please try again else try later.");
         });
 }
 
