@@ -52,7 +52,7 @@ function getDateTime() {
         minute = "0" + minute;
     }
     let dayString = days[now.getDay()];
-    return `${dayString}, ${hour}:${minute}`;
+    return `${dayString}, ${hour}:${minute}${hour >= 12 ? "pm" : "am"}`;
 }
 
 //Updating date and time
@@ -273,12 +273,11 @@ function changeBackground(condition) {
 function getHour(time) {
     let hour = time.split(":")[0];
     let min = time.split(":")[1];
-    if (x=hour > 12 ? "pm" : "am") {
-        hour = hour - 12;
-        
-        return `${hour}:${min}${x}`;
+    if (hour > 12 ) {
+        hour = hour - 12;    
+        return `${hour}:${min}`;
     } else {
-        return `${hour}:${min}${x}`;
+        return `${hour}:${min}`;
     }
 }
 
