@@ -59,7 +59,7 @@ function getDateTime() {
 date.innerText = getDateTime();
 setInterval(() => {
     date.innerText = getDateTime();
-}, 100);
+}, 10000);
 
 // function to get public ip address
 function getPublicIp() {
@@ -273,11 +273,12 @@ function changeBackground(condition) {
 function getHour(time) {
     let hour = time.split(":")[0];
     let min = time.split(":")[1];
-    if (hour > 12) {
+    if (x=hour > 12 ? "pm" : "am") {
         hour = hour - 12;
-        return `${hour}:${min}am`;
+        
+        return `${hour}:${min}${x}`;
     } else {
-        return `${hour}:${min}pm`;
+        return `${hour}:${min}${x}`;
     }
 }
 
