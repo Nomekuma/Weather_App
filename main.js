@@ -273,8 +273,8 @@ function changeBackground(condition) {
 function getHour(time) {
     let hour = time.split(":")[0];
     let min = time.split(":")[1];
-    if (hour > 24) {
-        hour = hour - 24;
+    if (hour > 12) {
+        hour = hour - 12;
         return `${hour}:${min} AM`;
     } else {
         return `${hour}:${min} PM`;
