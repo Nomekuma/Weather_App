@@ -287,8 +287,8 @@ function covertTimeTo24HourFormat(time) {
     let minute = time.split(":")[1];
     let ampm = hour >= 12 ? "pm" : "am";
     hour = hour % 24;
-    hour = hour ? hour : 24; // 
-    hour = hour < 10? "0" + hour : hour;
+    hour = hour ? hour : 12; 
+    hour = hour < 10 ? "0" + hour : hour;
     minute = minute < 10 ? "0" + minute :minute;
     let strTime = hour + ":" + minute + ampm;
     return strTime;
