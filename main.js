@@ -281,7 +281,7 @@ function getHour(time) {
     }
 }
 
-
+//Sun set and sun rise time
 function covertTimeTo24HourFormat(time) {
     let hour = time.split(":")[0];
     let minute = time.split(":")[1];
