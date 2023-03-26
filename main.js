@@ -275,9 +275,9 @@ function getHour(time) {
     let min = time.split(":")[1];
     if (hour > 12 ) {
         hour = hour - 12;    
-        return `${hour}:${min}`;
+        return `${hour}:${min}am`;
     } else {
-        return `${hour}:${min}`;
+        return `${hour}:${min}pm`;
     }
 }
 
