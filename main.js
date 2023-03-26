@@ -24,7 +24,7 @@ const temp = document.getElementById("temp"),
     weekBtn = document.querySelector(".week"),
     weatherCards = document.querySelector("#weather-cards");
 
-let currentCity = "Mauritius";
+let currentCity = "";
 let currentUnit = "c";
 let hourlyorWeek = "week";
 
@@ -52,14 +52,14 @@ function getDateTime() {
         minute = "0" + minute;
     }
     let dayString = days[now.getDay()];
-    return `${dayString}, ${hour}:${minute}${hour >= 12 ? "pm" : "am"}`;
+    return `${dayString}, ${hour}:${minute}`;
 }
 
 //Updating date and time
 date.innerText = getDateTime();
 setInterval(() => {
     date.innerText = getDateTime();
-}, 10000);
+}, 100);
 
 // function to get public ip address
 function getPublicIp() {
@@ -275,9 +275,9 @@ function getHour(time) {
     let min = time.split(":")[1];
     if (hour > 12 ) {
         hour = hour - 12;    
-        return `${hour}:${min}am`;
+        return `${hour}:${min}`;
     } else {
-        return `${hour}:${min}pm`;
+        return `${hour}:${min}`;
     }
 }
 
