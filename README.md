@@ -1,6 +1,8 @@
 # Weather app website
 
-[**Preview**](https://tushil-g.github.io/Weather_App/)
+[**Preview:**](https://tushil-g.github.io/Weather_App/)
+
+<img width="630" alt="Untitled" src="https://user-images.githubusercontent.com/122863540/229309388-856738a9-0920-4295-b7b9-9b13bbf71fff.png">
 
 **FUNCTIONS:**
 
