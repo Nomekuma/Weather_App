@@ -7,7 +7,7 @@
 **FUNCTIONS:**
 
 ```
-checks current, past, and future weather patterns
+checks current and future weather patterns
 ```
 
 ## contribution 
