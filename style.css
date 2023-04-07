@@ -293,7 +293,7 @@ img {
 
 .card2 .content p:first-child {
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .card2 .content p:nth-child(2) {
@@ -323,9 +323,8 @@ img {
 }
 /* Add this media query to target Android size devices */
 @media only screen and (max-width: 480px) and (min-width: 360px) and (-webkit-device-pixel-ratio: 2) {
-    *{
-        
-        font: 1em sans-serif;
+    .main {
+        padding: 20px 20px;
     }
     .weather-icon {
         width: 30%;
@@ -347,17 +346,18 @@ img {
     }
     .card2 .content p:first-child {
         text-align: center;
-        font-size: 16px;}
+        font-size: 15px !important;
+    }
     .card2 .content p:nth-child(2) {
         font-size: 10px;
         margin-top: 10px;
         text-align: center;
     }
     .main nav {
-        display: flex;
+        
         align-items: center;
         justify-content: space-between;
-        width: 650px;
+        
     }
     .search {
         font-size: 1.5rem;
