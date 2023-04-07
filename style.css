@@ -443,7 +443,6 @@ img {
 
 
 body {
-    width: 60%;
 
     display: flex;
 
@@ -531,7 +530,7 @@ img {
     }
 
     body {
-
+        width: 60%;
         padding: 20px;
 
     }
