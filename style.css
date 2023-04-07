@@ -320,4 +320,130 @@ img {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+}/* Add this media query to target Android mobile devices */
+@media only screen and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+    .weather-icon {
+        width: 25%;
+        margin: 0 auto;
+    }
+    body {
+        padding: 10px;
+    }
+
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        flex: 1 1 100%;
+    }
+
+    .temperature {
+        font-size: 3rem;
+    }
+
+    .condition-rain {
+        font-size: 1.5rem;
+    }
+
+    .location {
+        font-size: 1.5rem;
+    }
+
+    .options {
+        font-size: 1.5rem;
+    }
+
+    .card2 {
+        font-size: 1.5rem;
+    }
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --primary-color: #5598fd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: var(--primary-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cd.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sidebar {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.main {
+    flex: 1 1 calc(100% - 300px);
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 768px) {
+    .weather-icon {
+        width: 25%;
+        margin: 0 auto;
+    }
+    body {
+        padding: 20px;
+    }
+
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .main {
+        padding: 10px;
+    }
+    .weather-icon {
+    width: 25%;
+    margin: 0 auto;
+}}
