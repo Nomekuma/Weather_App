@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    min-width: 1000px;
+    min-width: 320px;
     padding: 50px;
     background: var(--primary-color);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cd.jpg");
@@ -26,17 +26,22 @@ body {
 img {
     width: 100%;
 }
-
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 30px;
+    min-width: initial;
+}
 .wrapper {
     display: flex;
-    width: 1200px;
+    flex-direction: column;
+    width: 100%;
     min-width: 900px;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .sidebar {
-    width: 30%;
+    width: 100%;
     min-width: 250px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.815);
@@ -532,7 +537,7 @@ img {
   }
   
   img {
-    width: 35%;
+    width: 100%;
   }
   
   
