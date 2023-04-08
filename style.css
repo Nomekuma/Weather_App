@@ -338,6 +338,7 @@ img {
 }
 
 body {
+  width:50% ;
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -522,6 +523,7 @@ img {
   }
   
   body {
+    width: 50%;
     display: flex;
     justify-content: center;
     min-height: 100vh;
