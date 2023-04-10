@@ -14,8 +14,8 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  min-width: 320px;
-  padding: 50px;
+  min-width: 1000px;
+  padding: 20px;
   background: var(--primary-color);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cd.jpg");
   background-size: cover;
@@ -29,15 +29,15 @@ img {
 
 .wrapper {
   display: flex;
-  width: 100%;
-  flex-direction: column;
+  width: 1200px;
   min-width: 900px;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .sidebar {
-  width: 100%;
+  width: 30%;
+  min-width: 250px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.815);
   display: flex;
@@ -321,49 +321,375 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 30px;
-    min-width: initial;
-}
+@media screen and (maxwidth: 768px) {
+  :root {
+    --primary-color: #5598fd;
+  }
   
-  .main nav .options button {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--primary-color);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("./cd.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.815);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .search {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .search input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ced4da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0 15px;
     font-size: 14px;
+    color: #495057;
   }
-  .main nav .units button {
-    width: 30px;
-    height: 30px;
+  
+  .search input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
   }
-  .cards .card {
-    width: 80px;
-    height: 110px;
+  
+  .search button {
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
   }
-  .cards .card h2 {
+  
+  .search ul {
+    max-height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .search ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  .search ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .search ul li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .search ul li.active {
+    background-color: #f1f1f1;
+  }
+  
+  .weather-icon {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .weather-icon #icon {
+    width: 80%;
+    object-fit: cover;
+  }
+  
+  .temperature {
+    display: flex;
+  }
+  
+  .temperature #temp {
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 1;
+  }
+  
+  .temperature span {
+    font-size: 30px;
+    margin-top: -10px;
+    display: block;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #e9ecef;
+    margin: 20px 0;
+  }
+  
+  .condition-rain {
     font-size: 12px;
+    text-transform: capitalize;
   }
-  .cards .card .card-icon {
-    width: 40%;
+  
+  .condition-rain div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
   }
-  .cards .card .day-temp {
-    font-size: 10px;
+  
+  .condition-rain div i {
+    width: 20px;
   }
-  .highlights .heading {
-    font-size: 16px;
+  
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 10px;
   }
-  .card2 {
-    width: 200px;
-    height: 120px;
+  
+  .main {
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;}
   }
-  .card2 .content p:first-child {
-    font-size: 25px;
+  @media screen and (max-width: 760px) {
+  
+  :root {
+      --primary-color: #5598fd;
+    }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+  
+    body {
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--primary-color);
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("./cd.jpg");
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.3s ease;
+    }
+  
+    img {
+      width: 100%;
+    }
+  
+  
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  
+    .sidebar {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.815);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .search {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      position: relative;
+    }
+  
+    .search input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #ced4da;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 0 15px;
+      font-size: 14px;
+      color: #495057;
+    }
+  
+    .search input:focus {
+      outline: none;
+      border: 1px solid var(--primary-color);
+    }
+  
+    .search button {
+      min-width: 40px;
+      height: 40px;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: var(--primary-color);
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  
+    .search ul {
+      max-height: 300px;
+      overflow-y: auto;
+      position: absolute;
+      width: 70%;
+      top: 40px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+  
+    .search ul li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #f1f1f1;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+  
+    .search ul li:last-child {
+      border-bottom: none;
+    }
+  
+    .search ul li:hover {
+      background-color: #f1f1f1;
+    }
+  
+    .search ul li.active {
+      background-color: #f1f1f1;
+    }
+  
+    .weather-icon {
+      width: 80%;
+      height: 150px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  
+    .weather-icon #icon {
+      width: 70%;
+      object-fit: cover;
+    }
+  
+    .temperature {
+      display: flex;
+    }
+  
+    .temperature #temp {
+      font-size: 50px;
+      font-weight: 100;
+      line-height: 1;
+    }
+  
+    .temperature span {
+      font-size: 30px;
+      margin-top: -10px;
+      display: block;
+    }
+  
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #e9ecef;
+      margin: 20px 0;
+    }
+  
+    .condition-rain {
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+  
+    .condition-rain div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .condition-rain div i {
+      width: 20px;
+    }
+  
+    .location {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .main {
+      width: 20%;
+      padding: 20px;
+      background-color: #fff;}
+  
+  
   }
-  .card2 .content p:nth-child(2) {
-    font-size: 10px;
-  }
-  .credits {
-    font-size: 10px;
-  }
-
-}
+ 
   
 
