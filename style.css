@@ -389,9 +389,101 @@ img {
     font-size: 10px;
   }
   .weather-icon #icon {
-    width: 50%; 
+    width: 50%;
   }
   .card .card-icon {
-    width: 40%; 
+    width: 40%;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 500px) {
+  /* Search input adjustments */
+  .search input {
+    font-size: 12px; /* Slightly bigger */
+    padding: 5px;
+  }
+
+  /* Temperature and unit adjustments */
+  .temperature #temp {
+    font-size: 35px; /* Bigger for visibility */
+  }
+
+  .temperature span {
+    font-size: 20px; /* Bigger for clarity */
+    margin-left: 3px; /* Add some space between temp and unit */
+  }
+
+  /* Icon size adjustments */
+  .weather-icon #icon {
+    width: 50%; /* Slightly larger to maintain visibility */
+  }
+
+  /* Card adjustments */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    gap: 10px; /* Reduce gap between cards */
+    margin-top: 30px; /* Add some space from the top */
+  }
+  .cards .card {
+    width: 80px; /* Smaller width for better fit */
+    height: 100px; /* Adjust height proportionally */
+    padding: 5px; /* Reduce padding for compactness */
+  }
+
+  .cards .card-icon {
+    width: 40%; /* Smaller icon */
+  }
+
+  /* Text size adjustments inside cards */
+  .card h2 {
+    font-size: 13px; /* Slightly bigger text */
+  }
+
+  .card .day-temp {
+    font-size: 10px; /* Smaller font to fit content */
+  }
+
+  /* Highlight section adjustments */
+  .highlights .card2 {
+    width: 100%; /* Full width for better fit */
+    height: auto; /* Auto height for flexibility */
+    padding: 10px;
+  }
+
+  .card2 .content p:first-child {
+    font-size: 22px; /* Larger font for legibility */
+  }
+
+  .card2 .content p:nth-child(2) {
+    font-size: 10px; /* Adjust size for smaller screen */
+  }
+
+  /* Nav button adjustments */
+  .main nav .options button {
+    font-size: 12px; /* Smaller but readable */
+  }
+  .main nav .units button {
+    width: 35px; /* Reduce width to fit smaller screen */
+    height: 35px; /* Adjust height proportionally */
+    font-size: 12px; /* Reduce font size for readability */
+    border-radius: 50%; /* Keep circular shape */
+    display: flex; /* Center the text inside the circle */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 0; /* Remove padding to avoid overflow */
+  }
+
+  /* Additional styling for alignment */
+  .main nav .units {
+    display: flex;
+    justify-content: flex-end; /* Keep button aligned to the right */
+    margin-right: 35px; /* Add some space from the edge */
+  }
+
+  .main nav .options {
+    flex-grow: 1; /* Ensure the options stay on the left */
   }
 }
