@@ -17,7 +17,8 @@ body {
   min-width: 1000px;
   padding: 20px;
   background: var(--primary-color);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cd.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./cd.jpg");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
@@ -115,14 +116,15 @@ img {
 
 .weather-icon {
   width: 100%;
-  height: 150px;
+  height: auto;
+  max-height: 100px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 100px;
 }
 
 .weather-icon #icon {
-  width: 80%;
+  width: 70%;
   object-fit: cover;
 }
 
@@ -311,8 +313,85 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    min-width: unset;
+  }
 
-  
-     
-  
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+    min-width: unset;
+  }
 
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    padding: 15px;
+  }
+
+  .main {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main .cards,
+  .highlights {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .highlights .heading {
+    text-align: center;
+  }
+
+  .cards .card,
+  .highlights .card2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .search input {
+    font-size: 12px;
+  }
+
+  .temperature #temp {
+    font-size: 40px;
+  }
+
+  .temperature span {
+    font-size: 20px;
+  }
+
+  .condition-rain div {
+    gap: 5px;
+  }
+
+  .main nav .options button {
+    font-size: 14px;
+  }
+
+  .card h2 {
+    font-size: 14px;
+  }
+
+  .card .day-temp {
+    font-size: 11px;
+  }
+
+  .card2 .content p:first-child {
+    font-size: 24px;
+  }
+
+  .card2 .content p:nth-child(2) {
+    font-size: 10px;
+  }
+  .weather-icon #icon {
+    width: 50%; 
+  }
+  .card .card-icon {
+    width: 40%; 
+  }
+}
