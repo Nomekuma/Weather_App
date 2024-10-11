@@ -487,3 +487,16 @@ img {
     flex-grow: 1; /* Ensure the options stay on the left */
   }
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #495057;
+  border-top: 1px solid #e9ecef;
+}
